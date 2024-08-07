@@ -21,8 +21,6 @@ jobs:
         with:
           xcode-version: '14.x'  # Especifica la versión de Xcode que deseas usar
 
-      - name: Install dependencies
-        run: swift package resolve
 
       - name: Build app
         run: xcodebuild -scheme Common -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' build
