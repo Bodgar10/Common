@@ -23,15 +23,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd Common/Common
+          cd Common
           swift package resolve
 
       - name: Build package
         run: |
-          cd Common/Common
+          cd Common
           swift build
 
       - name: Run tests
         run: |
-          cd Common/Common
+          cd Common
           swift test
