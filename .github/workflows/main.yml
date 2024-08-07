@@ -19,11 +19,19 @@ jobs:
       - name: Set up Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '14.x'  # Especifica la versión de Xcode que deseas usar
+          xcode-version: '15.2'  # Especifica la versión de Xcode que deseas usar
 
+      - name: Install dependencies
+        run: |
+          cd Common/Common
+          swift package resolve
 
-      - name: Build app
-        run: xcodebuild -scheme Common -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' build
+      - name: Build package
+        run: |
+          cd Common/Common
+          swift build
 
       - name: Run tests
-        run: xcodebuild -scheme Common -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' test
+        run: |
+          cd Common/Common
+          swift test
