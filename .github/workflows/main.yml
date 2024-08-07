@@ -22,10 +22,17 @@ jobs:
           xcode-version: '15.2'  # Especifica la versión de Xcode que deseas usar
 
       - name: Install dependencies
-        run: swift package resolve
+        run: |
+          cd Common
+          swift package resolve
 
       - name: Build package
-        run: swift build
+        run: |
+          cd Common
+          swift build
 
       - name: Run tests
-        run: swift test
+        run: |
+          cd Common
+          swift test
+
