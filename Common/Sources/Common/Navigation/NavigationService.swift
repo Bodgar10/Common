@@ -14,3 +14,6 @@ public protocol NavigationService: Service {
     func navigate(to destination: Destination)
 }
 
+protocol Test {
+    func test()
+}
