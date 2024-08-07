@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import SwiftUI
+
 @testable import Common
 
 final class ServiceLocatorTests: XCTestCase {
@@ -102,13 +104,13 @@ private final class ExampleService: ExampleProtocol {
 // MARK: ColorService
 
 protocol ColorProtocol: Service {
-    func getColor() -> UIColor
+    func getColor() -> Color
 }
 
 private final class ColorService: ColorProtocol {
     var id = UUID()
     
-    func getColor() -> UIColor {
+    func getColor() -> Color {
         return .red
     }
 }
