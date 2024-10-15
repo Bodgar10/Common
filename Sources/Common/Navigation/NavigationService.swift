@@ -8,9 +8,9 @@
 import Foundation
 
 public class NavigationState: ObservableObject {
-    @Published var path: [Destination] = []
-    @Published var isPresentingModal: Bool = false
-    @Published var modalDestination: Destination?
+    @Published public var path: [Destination] = []
+    @Published public var isPresentingModal: Bool = false
+    @Published public var modalDestination: Destination?
     
     public init() {}
 }
