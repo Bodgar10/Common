@@ -11,6 +11,8 @@ public class NavigationState: ObservableObject {
     @Published var path: [Destination] = []
     @Published var isPresentingModal: Bool = false
     @Published var modalDestination: Destination?
+    
+    public init() {}
 }
 
 /// Protocol to know where we need to go in each screen.
